@@ -73,11 +73,7 @@ public class WordFreq {
 			if(!currentline.isEmpty()){ //ignores empty lines, threads are not created for empty lines
 				//creates the thread, constructor calls start()
 				currenthread = new WordFreqThread("thread " + i, currentline); 
-				try{ 
-					currenthread.join(); //joins the threads so that parent will wait for them to complete
-				} catch (InterruptedException e){
-			        e.printStackTrace(); //error handling
-			    }
+				
 				
 				threads[i-1] = currenthread; //stores child thread so it can be called later
 				numthreads++; //keeps track of the number of threads
@@ -85,10 +81,19 @@ public class WordFreq {
 			else{
 				threads[i-1] = null; //ignores empty line, no thread created.
 				numthreads++;
+				System.out.println("thread " + i + " was not created and did not run, empty line."); //for completeness
 			}
 		}
 		
-		
+		for(int i=1; i<N+1; i++){
+			try{ 
+				if( !(threads[i-1]==null)){
+					threads[i-1].join(); //joins the threads so that parent will wait for them to complete
+				}
+			} catch (InterruptedException e){
+		        e.printStackTrace(); //error handling
+		    }
+		}
 		
 		/* Main process waits until all the threads complete then computes the consolidated word-frequency 
 		   data based on the individual threads’ output. */
@@ -113,7 +118,6 @@ public class WordFreq {
 					if(!TotalFrequencies.containsKey(tuple.getKey())){ 
 						//if the key value does not already exist in the parent HashMap, adds it 
 						TotalFrequencies.put((String)tuple.getKey(), (Integer) tuple.getValue());
-						
 					}
 					else {
 						//if the key value does already exist in the parent HashMap, sums its value with the child value 
@@ -123,6 +127,7 @@ public class WordFreq {
 				}	
 			}
 			else{
+				System.out.println();
 				System.out.println("thread " + i + " was not created and did not run, empty line."); //for completeness
 			}
 		}	

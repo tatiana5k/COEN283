@@ -1,3 +1,497 @@
 The quick brown fox jumped overthe lazy dog.The quick brown fox jumped over
 the lazy dog.
 		jump jump, jump: jump;   The quick brown fox jumped over the lazy dog, and the lazy cat, and the sleeping kangoroo, but it couldn’t jump over the elephant.
+
+
+The System Development Process 
+The evolution of a new system from the time when the need for it is recognized and a feasible technical approach is identified, through its development and introduction into operational use, is a complex effort, which will be referred to as the system (engineering) development process.
+
+Characteristics of a typical major systems development 
+Complex effort
+From when we get the first idea, it is a lot of steps to get the actual system
+Meets an important user need
+Usually requires several years to complete
+On the order of 8-10 years
+Made up of many interrelated tasks
+Need inputs from different groups; your schedule in one department waits on theirs in another
+Involves several different technical disciplines
+Usually performed by several organizations
+Has a specific schedule and budget
+
+In the first lecture we spoke about system engineering as both a practice and a process. 
+The practice is the big picture.  The practice must be robust.  
+Here we are talking about the process. If you remember it is both a technical and a management process – a structured approach to system development.
+Technical discipline that ensures you rigorously execute a sensible (rigorous, tested, solid foundation) development process for concept to operation
+Management discipline that organizes the technical effort – facilitates collaboration, defines workflows, and deploys development tools.      
+
+The development and introduction of a complex system inherently requires increasingly large commitments of resources as it progresses, the introduction of new technology usually involves risks, which must be identified and resolved as early as possible. These factors require that the system development be conducted in a step-by-step manner where:
+The success of each step is demonstrated and 
+The basis for the next one is validated before a decision is made to proceed
+
+The process helps us manage and reduce risks.  
+
+The term “System Life Cycle” is commonly used to refer to the stepwise evolution of a new system through the system development process and on to production, operation, and ultimate disposal. As the type of work evolves the role of system engineering changes accordingly.
+Developing a System Engineering Life Cycle Model
+All life cycle models subdivide the system life into a set of basic steps that separate major decision milestones.
+Steps in the life cycle had to correspond to the progressive transitions in the principle systems engineering activities
+The steps had to be capable of being mapped into the principle life cycle models in use by the system engineering community.
+Remember: system engineering started in industry and then went to university; want to have a model that corresponds to those actually used in the industry
+The derived model will be referred to as the “system engineering life cycle.” 
+        
+
+
+The Simplified “V” Model     See below for diagram
+
+          The Simplified “V” Model of the System Engineering Process
+
+This is all of the phases, but bent into a V
+Demonstrates simply that complex system design must start from the top and break down the problem into simpler tasks that can be handled within the traditional disciplines. This is called system decomposition → integration.
+At each step on the left side of the “V” you create the requirements that drive the next step as well as a plan for verifying the implementation of the current level of decomposition. 
+At each step on the right side of the “V” you create documentation to support system training, operation, maintenance, installation, and testing. 
+Seems like this is just a different way of describing waterfall, with emphasis on including testing.
+By linking all the steps on the left side of the “V” through requirements and referring back to these requirements as you work your way up the right side of the “V” you are much more likely to stay true to your original mission and maintain objectivity throughout the process.  
+This means that you look across and think about the right side as you are creating specifications on the left side; as you are making the specification you need to consider how it will be tested
+
+The DOD acquisition model (DOD 5000.2)     (Fig. 4.1) in book
+In the second half of the 20th century to manage risks in the application of advanced technology, and to minimize the costly technical or management failures, the DOD developed comprehensive system acquisition guidelines.
+The fall 2008 version of the DOD life cycle model reflects the evolution of these acquisition guidelines.
+The DOD model is tailored toward managing large, complex system development efforts where reviews and decisions are needed at key events throughout the life cycle.
+It consists of five phases with three major milestones, and four decision points. Explain in detail Gov Acquisitions, Needs, and Technology Development     
+The main difference between this and other lifecycles has to do with the beginning
+
+Phase 1: proposal bid on how the object will be developed (eg plane), contract awarded to a given contractor, budget granted
+Phase 2: Engineering and Manufacturing Development (Design the model)
+Phase 3: Product and deployment   
+Phase 4: Operations and support
+
+    Phase 1 is Presystems Acquisition
+Phase 2 and 3 are Systems Acquisition
+Phase 4 is Sustainment
+
+
+The Other Life Cycle Models
+International ISO/IEC 15288 Model
+International Organization for Standardization
+Divided into six stages and 25 primary processes
+Concept, development, production, utilization, support, and retirement
+
+The Professional Engineering Model
+Tailored to the development of commercial systems
+Partitioned into six stages
+Conceptual, Technical Feasibility, Development, Commercial Validation and Product Preparation, Full-scale Production, and Product Support
+
+
+
+The Generic System Engineering Life Cycle Model (or process) See p. 12 for phases; this is going to be the model we focus on in this class
+Consists of three stages and nine phases 
+Concept Development Stage (have an idea)
+Needs Analysis Phase
+Concept Exploration Phase
+Concept Definition Phase
+Engineering Development Stage (make the drawings)
+Advanced Development Phase
+Engineering Design Phase
+Integration and Evaluation Phase
+Post Development Stage (building the structure)
+Production Phase
+Operations and Support Phase
+Retirement or Disposal Phase
+
+The Software Life Cycle 
+The generic system engineering life cycle applies to the majority of complex systems containing significant software functionality at the component level.
+However, software intensive systems, in which software performs virtually all of the functionality, generally follow life cycles similar in form but often involving significant amounts of iteration and prototyping.    
+In software you can iterate, go back up the phases of development.  You have to accommodate all of these phases (and iteration) when doing a system that includes software.  
+
+
+System Engineering Life Cycle Stages 
+Concept Development – formulation and definition of a system concept perceived to best satisfy a valid need.
+The need must be there for you to sell it.  
+
+Engineering Development – translates the system concept into a validated physical system design that meets operational, cost, and schedule requirements
+
+Post Development – includes production, deployment, operation and support of the system throughout its lifetime (and disposal)
+
+
+Principle Objectives of the Concept Development Stage  
+Establish that there is a valid need (market) for a new system that is technically and economically feasible
+Explore potential system concepts and formulate and validate a set of system performance requirements
+Select the most attractive system concept, define its functional characteristics, and develop a detailed plan for the subsequent stages of engineering, production, and operational deployment of the system.
+Develop any new technology called for by the selected system concept and validate its capability to meet requirements.      
+
+How do you determine there is a need for the system?
+If someone is coming to you with a bundle of money asking for it.
+
+Principle Objectives of the Engineering Development Stage 
+Perform the engineering development of a prototype system satisfying the requirements of performance, reliability, maintainability, and safety.
+Engineer the system for economical production and use and to demonstrate its operational suitability 
+Economical production - Have to figure out the challenges of building this system
+Operational suitability - Has to operate, and has to operate in all the different environments
+
+Principle Objectives of the Post Development Stage 
+Successful system production and deployment
+In-service support as required
+Successful major system upgrades
+System Disposal as required
+
+See Figure 4.3 for a diagram of all three phases, with the addition of their inputs and outputs.  The outputs of one phase are the inputs of the next (emphasis on this).  
+
+
+
+
+
+First one is generic
+Second is commercial
+Third is DOD
+
+
+This is an example of a company that buys everything and integrates them
+
+
+Department of Transportation
+
+Example applications of the System Life Cycle Model  
+High-tech commercial manufacturer
+Department of Defense 5000.2
+High-tech systems integrator
+U.S. Department of Transportation
+
+
+System Engineering Life Cycle Phases
+Each phase is like a process; there are inputs, outputs, and a phase development process
+
+The Concept Development Stage includes the following Phases
+Needs Analysis
+Inputs: (customer needs) operational deficiencies, technological opportunities
+Defines and validates the need for a new system
+Demonstrates its feasibility – both technically and economically
+Defines the system operational requirements (what & why?)
+Define what the system has to do and ask why it needs to do it
+Output: operational requirements, system studies  
+Concept Exploration 
+Inputs: outputs of the previous phase (operational requirements, system studies)
+Explores feasible concepts
+Defines functional performance requirements (how well?)
+How well does it have to do its requirements
+Output: system performance requirements, candidate system concepts
+Candidate system concepts are below the system level, looking at subsystems (where performance specs come from)     
+Concept Definition  
+Inputs: outputs of previous phase (system performance requirements, candidate system concepts)
+Examines alternative concepts
+Selects the preferred concept on the basis of performance, cost, schedule, and risk. Not necessarily one better than another, could be a combination, but the best concept for what we are trying to achieve.
+Defines the System Functional Specifications (A-Spec)
+Output: System Specifications (A-Spec), defined system concept, engineering and business plans
+A-Spec is architectural spec (functional spec)
+The majority of a systems engineer’s efforts are spent on engineering and business plans (this is where management asks a lot of questions).
+The outputs of this phase are also the outputs of the stage
+
+
+Systems Engineering Plays an Extremely Important Role in the Concept Development Stage (high level view)
+Plays a key role in requirements analysis; clarifying, prioritizing, ensuring items are both necessary and sufficient  (requirements can be internally or externally generated)
+Plays a key role in translating operational needs into a technically and economically feasible system concept.
+Plays a key role in trade-off studies and risk analysis
+If you don’t get the requirements right, then it doesn’t make any difference what you do on the rest of the project, because you didn’t build what the customer wanted
+
+To summarize the Concept Development Stage we have:
+Established that there is a valid (market) need for a new system that is technically and economically feasible
+Explored feasible system concepts and formulated and validated a set of system performance requirements
+Selected the most attractive system concept, defined its functional characteristics, and developed plans for subsequent stages
+Inputs: operational deficiencies, technological opportunities
+Outputs: System Functional Specifications, defined system concept, engineering and business plans
+Chart Figure 4.4; this all outputs to engineering plans
+
+
+The Engineering Development Stage includes the following Phases
+Advanced Development 
+Inputs: outputs of the previous stage (System Functional Specifications, defined system concept, engineering and business plans)
+Identifies areas of risk                               
+Reduces these risks through analysis, development, and test
+Defines the System Development Specifications (B Specs)
+Output: System Development Specs (B Specs), validated development model        
+In EE - this is the circuit diagram; these are the design  specifications                            
+System Development Specs aka System Design Specs 
+Validated development model - technology has been characterized so that the engineers can work with it; validating that the components/materials will work the way they need to to meet the specifications (eg. the plane won’t fall apart if we make it out of a new composite).  This is part of pre-systems acquisition/advanced development.                      
+Engineering Design 
+Inputs: output of the previous phase (System Development Specs (B Specs), validated development model)
+Performs preliminary and final design
+Builds and tests hardware and software components
+Output: test and evaluation plan, engineered component prototypes
+Integration and Evaluation 
+Inputs: outputs of previous phase (test and evaluation plan, engineered component prototypes)
+Integrates components/subsystems into a production prototype
+Evaluates the prototype system
+Rectifies deviations
+Outputs: Production Specifications (C, D = materials, and E = process Specs) to guide the manufacturing of the system, a production system – includes everything necessary to manufacture and assemble the system and may include a production prototype system.  
+
+System Engineering Role in the Engineering Development Stage
+Ensures component design faithfully implements functional and compatibility requirements
+The system does what it is supposed to do
+Manages the engineering change process
+Searches for changes, exceptions, risks, and compatibility issues during project review meetings
+Validates the entire design with respect to functional requirements
+Ensures (Facilitates) availability of any external test facilities/equipment
+Ensures design for manufacturability  
+
+To summarize the Engineering Development Stage we have:
+Developed and validated the required new technologies
+Transformed the selected concept into hardware and software designs
+Built and tested production models – engineered the system for economical production and use and demonstrated operational suitability
+Inputs: outputs of the previous stage (engineering plans)
+Outputs: Product Specifications (C, D, and E), production prototype system
+
+The Post Development Stage includes the following Phases
+Production 
+Inputs: outputs of previous stage (Production Specifications, prototype system)
+Develops tooling and manufactures system products
+Provides the system to the users (deployment)
+Must design in how you will deploy it; e.g. design pieces to fit into semi trailers, determine how calibration will occur
+Facilitates initial operations
+Output: operational and maintenance documentation, delivered system 
+Operation & Support
+Inputs: outputs of previous phase (system, maintenance documentation)
+Supports system operation and maintenance
+Customer training, field applications, logistics support
+Develops and supports in-service updates
+Major and minor system upgrades, software service packs
+Output: disposal plan, obsolete system
+Retirement & Disposal
+Assistance with system disposal
+Assistance with disposal of hazardous materials
+Software replacement or upgrade
+Offer to purchase spare/replacement parts  
+
+System Engineering Role in the Post Development Stage
+Assists in the resolution of manufacturing issues (with respect to effect on users)
+System deployment and qualification – can be simple or very complex
+Manages system changes and upgrades, document revisions, and software upgrades 
+
+
+To summarize the Post Development Stage we have:
+Produced and deployed the system(s)
+Supported system operation and maintenance and in-service upgrading
+Supported retirement or end of life disposal
+Inputs: outputs of the previous stage (system production specifications, production system)
+Outputs: operation and maintenance documentation, installed operational system, system retirement plans
+
+Test question: What is the output of the Concept Development Stage?
+3 things -
+system specifications A (system functional specs)
+defined system concept
+engineering and business plans
+                                                      ----------------------
+
+Decision Gates
+How do we control the development activities and manage risks in the System Development Process? 
+By conducting system development in a step-by–step manner where:
+The success of each step is demonstrated and
+The basis for the next step is validated before a decision is made to proceed
+
+Decision Gates – Preplanned management events in the project cycle to demonstrate accomplishments, baseline results, and approve the approach for continuing the project. These gates represent major decision points in the project. Discussions are usually broader in scope than PDR and CDR reviews.
+Used to control all three aspects of the project: technical, business, and budget
+Have we made sufficient technical progress, are we on schedule, have we reduced risks to an acceptable level?
+Does the project still satisfy the business case? (performance, cost, etc.)
+Is it affordable?
+Can it be delivered when needed?
+Are we still on budget?   
+
+Aspects of the product/system lifecycle – system integrity requires that these three aspects are in balance and given equal emphasis at all decision gate reviews
+Business aspect (business case)
+Budget aspect (system and development costs)
+Technical aspect (product, system development)
+This is not as detailed as design reviews
+Each of these is a topic at decision gate events.
+
+Decision Options (at each gate) These are NOT the topics for discussion
+Execute next stage (move on)
+Continue this stage
+Go to a preceding stage
+Hold project authority (put project on hold)
+Terminate project 
+
+
+
+Evolutionary Characteristics of the Development Process
+The Predecessor System - With the exceptions of a first generation breakthrough system a new system development can expect to have a predecessor system that can serve as a point of departure.  The predecessor system will impact the development of a replacement system in three ways:
+Deficiencies – point out the essential performance/feature requirements of the new system. Driving force for new system. 
+If deficiencies are not serious the overall concept and functional architecture may serve as a starting point for exploring alternatives
+Substantial portions may be reusable. This will minimize risk and save costs
+
+System materialization: A system is materialized from an abstract need to a set of actual components. In other words a new system moves from vision to validation. (Table 4-1, p84)
+
+The Participants – a large project involves hundreds of people and several organizational entities. The structure of the system development team changes during the life cycle. In addition, the ultimate user may or may not be an active participant in the project. Two of the most common situations are:
+The government serves as an acquisition agent and user with a commercial prime contractor supported by subcontractors as the system developer and producer
+A commercial company serves as the acquisition manager, system developer, and producer. Other commercial companies or the general public may be the users.
+One of the main features of systems engineering is to provide continuity between successive participating levels in the hierarchy and successive development phases and their participants through formal documentation and informal communications.(Figure 4.6, p86)
+
+System requirements and specifications
+Beginning with a set of operational requirements and ending with a complete set of production specifications, operation, maintenance, and training manuals and all other information needed to operate, maintain, and repair the system.
+The system descriptions not only lay the basis for the next phase of system design, but also specify how the results of the effort are to be tested in order to validate compliance with the requirements.(Table 4-2, p 88)
+In many cases the set of requirements and specification change during the life cycle.    
+
+
+
+
+System Specifications – a summary
+System Specifications (“A” specs) – Architecture down to the component level. Technical, performance, operational, and support characteristics, system interface specifications. 
+System Development specifications (“B” specs) – Engineering design specifications.
+Product Specifications (“C”, “D”, and “E” specs) – product, process (mfg), and material specifications
+
+Structured Methods are valuable for three reasons:
+They make the decision process explicit – understood and agreed upon by all team members
+They act as “checklists” to make sure important items are not forgotten
+Structured methods are largely self-documenting. In the process of executing the method, the team creates a record of the decision-making process for future reference and for educting newcomers.  
+
+Strength of plan driven methods (INCOSE):
+Predictability, stability, repeatability, high assurance
+Methods rely on the “master plans” to anchor their processes and provide project wide communications
+Experience – historical data is usually carefully collected and maintained as inputs to future planning to make schedules more accurate
+Process improvement focuses on increasing process capability through standardization, measurement, and control
+Why care about processes? – to understand, evaluate, control, learn, communicate, improve, predict, and certify work performed 
+
+Lecture Summary
+The System Life Cycle – stepby step evolution of the system from concept to disposal
+
+System Life Cycle Models
+The “V” Model
+The DOD Acquisition Model
+The System Engineering Model
+
+The System Engineering Life Cycle Model
+3 Stages and 9 Phases
+Inputs/Outputs of each Stage
+Objectives of each stage
+The role of the system engineer in each stage
+
+Application of the System Engineering Life Cycle to various industries
+
+Using Decision Gates to control development activities
+   
+Demonstrated the evolutionary characteristics of the system development process
+The predecessor system
+System materialization
+The participants
+System requirements and specifications
+
+Defined the difference between requirements and specifications.
+
+Described the major system specifications – A, B, C, D, and E.
+
+Identified three reasons why structured methods are valuable in the development of complex systems
+
+Questions to test your knowledge
+How would you describe “The System Life Cycle” to someone?
+How do System Development Life Cycle Models assist the Systems Engineering Manager in “guiding and controlling” the engineering of a complex system? 
+What are the three stages of the generic System Life Cycle Model and the phases within these stages?
+Can you describe the outputs of the Concept Development Stage of the System Life Cycle?
+Describe the purpose of Decision Gates, when they take place, and what are the major topics reviewed at these points in the program?
+Can you describe at least three roles/tasks of the Systems Engineer in each of the stages of the System Life Cycle?
+What is the major difference between the System Specifications (Type “A”) and the Development Specifications (Type “B”)?
+Why are specifications Type “C”, “D”, and “E” sometimes called the production specifications? 
+Describe the ways in which a replacement system can be affected by a predecessor system.
+What do we mean when we say that “a new system moves from vision to validation” during the development process? 
+In describing the evolutionary characteristics of the development process explain how the participants change over time.  
+Explain the three reasons why structured methods are valuable in the evelopment of complex systems. 
+
+Homework Assignment #3
+Problems: 4.1 in the text. (Note: Use your selected system as the example of a “recent development” in this question)
+Problem 4.3 in the text.
+Problem 4.5 in the text 
+Read: Chapter 4, 4.4-4.6
+
+
+Definitions
+System Specifications
+System Specification (Type “A”): Includes the technical, performance, operational, and support characteristics for the system as an entity. It includes the allocation of requirements to functional areas, and it defines the various functional area interfaces. The information derived from the feasibility analysis, operational requirements, maintenance concept, and functional analysis is covered. In commercial enterprises this specification is sometime referred to as the “architecture” specification.
+
+Development Specifications (Type “B”): Includes the technical requirements for any item below the system level where research, design, and development are accomplished. This may cover an equipment item, assembly, computer program, facility, critical item of support, etc. Each specification must include the performance, effectiveness, and support characteristics that are required in the evolving of the design from the system level and down. Sometimes referred to as “design” specifications. 
+
+Product Specification (Type “C”): Includes the technical requirements for any item below the top system level that is currently in the inventory and can be procured off the shelf. This may cover standard system components (equipment, assemblies, units, cables, etc.), a specific computer program, a spare part, a tool, etc.
+
+Process Specification (Type “D”): Includes the technical requirements that cover a service performed on any component of the system (e.g., machining, bending, welding, plating, heat treating, sanding, marking, packing, and processing.
+
+Material Specifications (Type “E”): Includes the technical requirements that pertain to raw materials, mixtures, (e.g., paints, chemical compounds), and/or semi-fabricated materials (e.g., electrical cable, piping) that are used in the fabrication of a product.
+
+Note: Specification classifications taken from MIL-STD-490, “Specification Practices,” Department of Defense, Washington, DC.   
+
+
+The System Life Cycle is defined as the stepwise evolution of a new system from concept through development, and on to production, operation, and ultimate disposal. 
+
+Decision Gates – Preplanned management events in the project cycle to demonstrate accomplishments, baseline results, and approve the approach for continuing the project. They are used to control all three aspects of the project: technical, business, and budget. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+APPENDIX - BUSINESS SYSTEM ENGINEERING 
+
+Fundamental Principles
+A business is a complex system
+Standards and best practices should help design, not define, the system
+A systems approach is needed to effectively design business systems
+Start out with some kind of requirements and performance metrics of what it has to do. (business objectives and goals verses requirements and functional specifications)
+Decompose it into architectural building blocks that people can understand (enterprise model and core processes verses subsystem architecture)
+Further decompose the architectural building blocks into lower level components (subsystem designs verses process maps for the business).
+Define some sort of test plan to validate the system actually meets its performance requirements. 
+
+Important Things to Understand in Using This Model 
+The important thing to understand is the general concept of taking a complex system from a high-level view and progressively and gradually decomposing it into higher levels of detail as the design progresses.
+This is a conceptual model. In actual practice, the exact implementation of the methodology will likely vary considerably from one situation to the next.
+In reality, it is probably not a one-time sequential approach as it is explained here. In a more typical scenario, it is probably more of an iterative process for arriving at an optimal design solution. With an iterative process, the initial design of the business system would proceed to some point in the process, such as operational test and evaluation, and result in a first-pass design approach. Based on the information learned from the first-pass design, another pass through the design process might be initiated to further improve and refine the design. 
+
+
+
+
+BUSINESS SYSTEM ENGINEERING DETAILED PROCESS SUMMARY
+
+Business System Definition
+Strategic Planning – identify target customers needs and values
+Organizational Design – define overall management approach, values, and principles for the business
+Business Planning – define overall business goals and objectives, identify key competitors, and define competitive strategy
+Enterprise Model Definition – define core processes and interrelationships
+Implementation Plan – define project plan with roles and responsibilities for implementation
+
+Core Process Definition 
+Define core process specifications – goals and metrics, interrelationships and interdependencies
+Define Supply Chain and Supplier specifications 
+
+Detailed Core Process Design
+Develop detailed process maps for all business processes
+Define information system(s) and interrelationships to business processes, plus any other support requirements
+Define and implement any external supplier relationships
+Define assessment approach and metrics to evaluate the effectiveness of all business processes
+Define approach for ongoing process improvement
+
+Operational Test and Evaluation
+Test and evaluate all processes and systems in the operational environment prior to cutover
+Finalize design of business processes and systems and cutover to operational use.
+
+Ongoing Continuous Improvement
+Track effectiveness of system performance against operational metrics and goals
+Implement self-assessment process and process improvement methodology
+Continuing improving the system in operational use. Reengineer the system as required
+
+
+
+  
+
+  
