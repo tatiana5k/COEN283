@@ -108,7 +108,7 @@ public class WordFreq {
 				
 				System.out.println();
 				System.out.println("thread "+i);
-				printFrequencies(ThreadFrequencies);
+				printFrequenciesAZ(ThreadFrequencies);
 				
 				iterT = ThreadFrequencies.entrySet().iterator(); //initializes iterator
 				
@@ -132,12 +132,13 @@ public class WordFreq {
 			}
 		}	
 		
+		
 		/*
 		 * Print result. 
 		 */
 		System.out.println();
 		System.out.println("TOTALS:");
-		printFrequencies(TotalFrequencies);
+		printFrequenciesAZ(TotalFrequencies);
 		
 		System.out.println();
 		System.out.println("Total Word Count = " + totalwordcount);
@@ -148,8 +149,9 @@ public class WordFreq {
 	 * input: HashMap
 	 * output: none (print to console)
 	 */
-	public static void printFrequencies(HashMap Frequencies){
-		Iterator iter = Frequencies.entrySet().iterator();
+	public static void printFrequenciesAZ(Map Frequencies){
+		TreeMap<String, Integer> SortedFrequencies = new TreeMap(Frequencies);
+		Iterator iter = SortedFrequencies.entrySet().iterator();
 		while(iter.hasNext()){
 			Map.Entry tuple = (Map.Entry)iter.next();
 			System.out.println(tuple.getKey() + " = " + tuple.getValue());

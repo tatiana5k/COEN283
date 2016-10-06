@@ -23,7 +23,8 @@ public class WordFreqThread extends Thread {
 		 */
 		super(myname); 
 		//trims off leading whitespace, and separates words by spaces, commas, periods, colons, etc. using regex
-		worddata = lineinput.trim().split("[\\t\\s,.:;()-?]+"); 
+		worddata = lineinput.trim().split("[\\n\\r\\f\\t\\v\\s,.:;()-+*$?!/\"]+"); 
+		//worddata = lineinput.trim().split("[^\\w\']+"); 
 		Frequencies = new HashMap<String, Integer>();	//creates the HashMap to store the frequencies
 		System.out.println(myname + " has been created.");
 		start(); //calls run()
