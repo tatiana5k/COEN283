@@ -41,7 +41,7 @@ public class BufferedPrinter {
 		sourcename[0] = new String("The quick brown fox.txt");
 		sourcename[1] = new String("The slow pink fox.txt");
 		sourcename[2] = new String("The sly silver fox.txt");
-		sourcename[3] = new String("Instructions.txt");
+		sourcename[3] = new String("Description.txt");
 
 		StringBuilder Buffer1 = new StringBuilder();
 		StringBuilder Buffer2 = new StringBuilder();
