@@ -1,0 +1,7 @@
+TITLE: Instructions
+
+Three threads are involved in printing a file. 
+Thread A reads the file data from the disk to Buffer 1, 
+Thread B copies the data from Buffer 1 to Buffer 2, 
+finally Thread C takes the data from Buffer 2 and print it.  
+Implement this using semaphores for synchronization.

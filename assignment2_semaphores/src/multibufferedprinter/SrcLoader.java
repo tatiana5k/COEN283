@@ -23,7 +23,14 @@ public class SrcLoader implements Runnable {
 	SrcLoader(){
 		//default constructor
 	}
-	SrcLoader(String[] sourcename, StringBuilder Buffer1, Semaphore isfullBuf1, Semaphore isemptyBuf1, int numrecords) {
+	
+	/*
+	 * Constructs SrcLoader Object with all the proper pointers
+	 * to buffers and Semaphores.
+	 */
+	SrcLoader(String[] sourcename, StringBuilder Buffer1, 
+			  Semaphore isfullBuf1, Semaphore isemptyBuf1, 
+			  int numrecords) {
 	
 		sourcefile = null; 
 		this.Buffer1 = Buffer1;
@@ -33,7 +40,7 @@ public class SrcLoader implements Runnable {
 		this.numrecords = numrecords;
 		n = 0;
 
-		System.out.println("Created SrcReader");
+		System.out.println("Created SrcLoader");
 
 	}
 	
@@ -41,11 +48,9 @@ public class SrcLoader implements Runnable {
 		while(n<numrecords){
 			
 			try{
-				isemptyBuf1.acquire();
+				isemptyBuf1.acquire(); //obtains semaphore before going into critical section
 				
-				/*
-				 * Loads the source file. Code recycled from assignment 1.
-				 */		
+				 //Loads the source file. Code modified from assignment 1.	
 				try{ //in case the file is not found.
 					sourcefile = new File(sourcename[n]);
 					input = new Scanner(sourcefile);
@@ -54,6 +59,7 @@ public class SrcLoader implements Runnable {
 			        e.printStackTrace();
 			    }
 				
+				//loads the text into Buffer1
 				Buffer1.append(input.useDelimiter("\\Z").next());
 
 				System.out.println();
@@ -61,14 +67,12 @@ public class SrcLoader implements Runnable {
 				
 				n++;
 				
-				isfullBuf1.release();
+				isfullBuf1.release(); //releases Buffer1 for read
 				
 			}
 			catch(InterruptedException e){
 				System.out.println("Failed in SrcReader");
 				e.printStackTrace();
-			
-				System.out.println("Waiting to Load");
 			}	
 		}
 	}

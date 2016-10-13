@@ -18,11 +18,15 @@ public class BufCopier implements Runnable{
 		//default constructor
 	}
 	
+	
+	/*
+	 * Constructs BufCopier Object with all the proper pointers
+	 * to buffers and Semaphores.
+	 */
 	BufCopier(StringBuilder Buffer1, StringBuilder Buffer2, 
 			  Semaphore isfullBuf1, Semaphore isemptyBuf1, 
 			  Semaphore isfullBuf2, Semaphore isemptyBuf2, 
 			  int numrecords){
-		
 	
 		this.Buffer1 = Buffer1;
 		this.Buffer2 = Buffer2;
@@ -34,7 +38,6 @@ public class BufCopier implements Runnable{
 		n=0;
 		
 		System.out.println("Created BufMover");
-
 	
 	}
 	
@@ -43,15 +46,19 @@ public class BufCopier implements Runnable{
 		while(n<numrecords){
 			try{
 			
+				//obtains access before entering critical secion
 				isfullBuf1.acquire();
 				isemptyBuf2.acquire();
 				
+				//copies contents of Buffer1 to Buffer2
 				Buffer2.append(Buffer1.toString());
 				Buffer1.delete(0, Buffer1.length());
 		
 				System.out.println("Copying from Buffer 1 to Buffer 2");
 				
 				n++;
+				
+				//releases for write to Buffer1 and print of Buffer2
 				isemptyBuf1.release();
 				isfullBuf2.release();
 				
