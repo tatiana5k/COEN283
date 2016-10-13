@@ -71,7 +71,7 @@ public class SrcLoader implements Runnable {
 				
 			}
 			catch(InterruptedException e){
-				System.out.println("Failed in SrcReader");
+				System.out.println("Failed in SrcLoader");
 				e.printStackTrace();
 			}	
 		}

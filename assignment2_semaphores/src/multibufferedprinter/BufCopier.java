@@ -37,7 +37,7 @@ public class BufCopier implements Runnable{
 		this.numrecords = numrecords;
 		n=0;
 		
-		System.out.println("Created BufMover");
+		System.out.println("Created BufCopier");
 	
 	}
 	
@@ -46,7 +46,7 @@ public class BufCopier implements Runnable{
 		while(n<numrecords){
 			try{
 			
-				//obtains access before entering critical secion
+				//obtains access before entering critical section
 				isfullBuf1.acquire();
 				isemptyBuf2.acquire();
 				
@@ -64,7 +64,7 @@ public class BufCopier implements Runnable{
 				
 			}
 			catch(InterruptedException e){
-				System.out.println("Failed in BufMover");
+				System.out.println("Failed in BufCopier");
 				e.printStackTrace();
 			}
 			
