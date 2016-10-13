@@ -1,0 +1,10 @@
+TITLE: The slow pink fox.txt
+
+The slow pink fox hopped over
+the lazy cat.
+
+These are the contents of text file 2.
+
+
+
+[END]

@@ -1,0 +1,10 @@
+TITLE: The sly silver fox.txt
+
+The sly silver fox didn't go anywhere.
+
+It didn't see the point to jumping or hopping. 
+It just took a nap.
+
+Testing delimiters: This: this; THIS! and this\
+
+[END]

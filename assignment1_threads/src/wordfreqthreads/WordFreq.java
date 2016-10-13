@@ -11,7 +11,7 @@ import java.util.stream.Stream;
 
 public class WordFreq {
 	
-	Object lock = new Object();
+	//Object lock = new Object();
 	
 	public static void main ( String[] args ) throws IOException {
 	
