@@ -101,6 +101,13 @@ public class Bank {
 
 				currentthread.start(); //calls BankClient run()
 				
+				try{
+					currentthread.join();
+				}catch (InterruptedException e){
+			        e.printStackTrace(); //error handling
+			    }
+				
+				
 				//numthreads++; //keeps track of the number of threads
 			}
 			/*else{
@@ -114,6 +121,7 @@ public class Bank {
 			((Thread)R.get(i)).start();
 		}*/
 		
+		System.out.println("Bank end.");
 	}
-
+	
 }
