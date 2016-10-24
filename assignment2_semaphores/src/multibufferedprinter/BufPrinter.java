@@ -29,7 +29,6 @@ public class BufPrinter implements Runnable {
 		this.numrecords = numrecords;
 		n = 0;
 		System.out.println("Created Printer");
-		
 
 	}
 	
