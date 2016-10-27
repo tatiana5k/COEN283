@@ -6,8 +6,10 @@ public class Banker {
 	
 	long[] E;
 	long[] A;
-	ArrayList C;
-	ArrayList R;
+	long[][] C;
+	long[][] R;
+	
+	boolean safe;
 	
 	Banker(){
 		//default constructor
@@ -15,24 +17,18 @@ public class Banker {
 	
 	//do I need a mutex on the banker?
 	
-	Banker (long[] E, long[] A, ArrayList C, ArrayList R){
+	Banker (long[] E, long[] A, long[][] C, long[][] R){
 		this.E = E;
 		this.A = A;
 		this.C = C;
-		this.R = R;	
+		this.R = R;
+		safe = false;
 	}
 	
-	synchronized boolean requestResource(long amount){
-		System.out.println(Thread.currentThread().getName() + " request received.");
+	synchronized void requestResource(long amount, int clientnumber){
+		System.out.println(Thread.currentThread().getName() + " request for " + amount + " received.");
 		//check if resource grant would cause unsafe state
-		while(amount>A[0]){
-			
-			//error handling
-			if(amount>E[0]){
-				System.out.println("Resource requested is greater than maximum allowed)");
-			//	Thread.currentThread().stop();
-			}
-			
+		while((A[0]-amount) < (R[0][clientnumber-1] - (C[0][clientnumber-1] + amount))){
 			//if yes, make the calling thread wait
 			try{
 				System.out.println(Thread.currentThread().getName() + " must wait.");
@@ -43,17 +39,19 @@ public class Banker {
 	        }
 		}	
 		
-		C.add(Thread.currentThread());
+		System.out.println(Thread.currentThread().getName() + " request for " + amount + " has been granted.");
+		C[0][clientnumber-1] = C[0][clientnumber-1] + amount;
 		A[0] = A[0]-amount;
 		System.out.println("Available Funds in Bank: " + A[0]);
-			
-		return true;
+		
+		notify();
 
 	}
-	synchronized void returnResource(long amount){
-		C.remove(Thread.currentThread());
+	synchronized void returnResource(long amount, int clientnumber){
+		C[0][clientnumber-1] = C[0][clientnumber-1] - amount;
 		A[0] = A[0]+amount;
-		System.out.println(Thread.currentThread().getName() + " funds released.");
+		System.out.println(Thread.currentThread().getName() + " funds returned.");
+		System.out.println("Available Funds in Bank: " + A[0]);
 		notify();
 	}
 }
