@@ -1,14 +1,10 @@
 package bankeralgsim;
 
-import java.util.concurrent.Semaphore;
-
 import javax.management.monitor.Monitor;
 
 public class BankClient implements Runnable{
 	
 	String[] data;
-	Semaphore mutex_R;
-	Semaphore mutex_B;
 	Monitor monitor_B;
 	Banker B;
 	String name;
@@ -21,16 +17,14 @@ public class BankClient implements Runnable{
 		//default constructor
 	}
 	
-	BankClient(long credit, int clientnumber, Semaphore mutex_R, Semaphore mutex_B, Banker B){
+	BankClient(long credit, int clientnumber, Banker B){
 
-		//trims off leading whitespace, and separates words by spaces, commas, periods, colons, etc. using regex
+		//initialize variables
 		name = "Client no. " + clientnumber; 
-		req = (long)(credit * .25);
+		req = (long)(credit * .25); //first request will be 25% of the client's credit line
 		
 		this.clientnumber = clientnumber;
 		this.credit = credit;
-		this.mutex_R = mutex_R;
-		this.mutex_B = mutex_B;
 		this.B = B;
 
 		System.out.println( name + " has been created.");
@@ -49,11 +43,12 @@ public class BankClient implements Runnable{
 			} catch(InterruptedException ex) {
 			    Thread.currentThread().interrupt();
 			}
-
+			//second request will be the remainder of the credit allowed
 			req = credit-allocated;
 		}
 		
 		if(allocated==credit){
+			//threads are done when they've used up all their credit
 			System.out.println(name + " successfully completed. Returning funds (" + allocated + ")...");
 			B.returnResource(allocated, clientnumber);
 		}	

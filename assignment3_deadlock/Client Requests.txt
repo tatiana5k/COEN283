@@ -1,5 +1,5 @@
 Bob $900
 Mary $100
 Sam $350
-Ray $820
+Ray $1000
 Sally $50

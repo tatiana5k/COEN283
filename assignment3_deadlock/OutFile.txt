@@ -1,1 +1,0 @@
-Enter quantity of bank resource: 
