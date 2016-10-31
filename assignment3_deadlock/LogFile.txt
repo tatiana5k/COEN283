@@ -1,11 +1,11 @@
 Bank total resource (cash): 1000
 
 Clients' allocated credit lines (max resource needs):
-Client no. 1: 900
-Client no. 2: 100
-Client no. 3: 350
+Client no. 1: 1000
+Client no. 2: 1000
+Client no. 3: 1000
 Client no. 4: 1000
-Client no. 5: 50
+Client no. 5: 1000
 
 Creating Clients.
 Client no. 1 has been created.
@@ -15,56 +15,61 @@ Client no. 4 has been created.
 Client no. 5 has been created.
 
 Running Clients...
-Client no. 1 request for 225 received.
-Client no. 1 request for 225 has been granted.
-Available Funds in Bank: 775
-Client no. 5 request for 12 received.
-Client no. 5 request for 12 has been granted.
-Available Funds in Bank: 763
-Client no. 3 request for 87 received.
-Client no. 3 request for 87 has been granted.
-Available Funds in Bank: 676
-Client no. 2 request for 25 received.
-Client no. 2 request for 25 has been granted.
-Available Funds in Bank: 651
+Client no. 1 request for 250 received.
+Client no. 1 request for 250 has been granted.
+Available Funds in Bank: 750
+Client no. 5 request for 250 received.
+Client no. 5 must wait.
 Client no. 4 request for 250 received.
 Client no. 4 must wait.
-Client no. 1 request for 675 received.
-Client no. 1 must wait.
-Client no. 2 request for 75 received.
-Client no. 2 request for 75 has been granted.
-Available Funds in Bank: 576
-Client no. 5 request for 38 received.
-Client no. 5 request for 38 has been granted.
-Available Funds in Bank: 538
-Client no. 3 request for 263 received.
-Client no. 3 request for 263 has been granted.
-Available Funds in Bank: 275
-Client no. 1 must wait.
-Client no. 4 must wait.
-Client no. 3 successfully completed. Returning funds (350)...
-Client no. 5 successfully completed. Returning funds (50)...
-Client no. 2 successfully completed. Returning funds (100)...
-Client no. 3 funds returned.
-Available Funds in Bank: 625
-Client no. 1 must wait.
-Client no. 2 funds returned.
-Available Funds in Bank: 725
-Client no. 5 funds returned.
-Available Funds in Bank: 775
-Client no. 1 request for 675 has been granted.
-Available Funds in Bank: 100
-Client no. 4 must wait.
-Client no. 1 successfully completed. Returning funds (900)...
+Client no. 3 request for 250 received.
+Client no. 3 must wait.
+Client no. 2 request for 250 received.
+Client no. 2 must wait.
+Client no. 1 request for 750 received.
+Client no. 1 request for 750 has been granted.
+Available Funds in Bank: 0
+Client no. 5 must wait.
+Client no. 1 successfully completed. Returning funds (1000)...
 Client no. 1 funds returned.
 Available Funds in Bank: 1000
 Client no. 4 request for 250 has been granted.
 Available Funds in Bank: 750
+Client no. 3 must wait.
 Client no. 4 request for 750 received.
 Client no. 4 request for 750 has been granted.
 Available Funds in Bank: 0
+Client no. 2 must wait.
 Client no. 4 successfully completed. Returning funds (1000)...
 Client no. 4 funds returned.
+Available Funds in Bank: 1000
+Client no. 5 request for 250 has been granted.
+Available Funds in Bank: 750
+Client no. 3 must wait.
+Client no. 5 request for 750 received.
+Client no. 5 request for 750 has been granted.
+Available Funds in Bank: 0
+Client no. 2 must wait.
+Client no. 5 successfully completed. Returning funds (1000)...
+Client no. 5 funds returned.
+Available Funds in Bank: 1000
+Client no. 3 request for 250 has been granted.
+Available Funds in Bank: 750
+Client no. 2 must wait.
+Client no. 3 request for 750 received.
+Client no. 3 request for 750 has been granted.
+Available Funds in Bank: 0
+Client no. 2 must wait.
+Client no. 3 successfully completed. Returning funds (1000)...
+Client no. 3 funds returned.
+Available Funds in Bank: 1000
+Client no. 2 request for 250 has been granted.
+Available Funds in Bank: 750
+Client no. 2 request for 750 received.
+Client no. 2 request for 750 has been granted.
+Available Funds in Bank: 0
+Client no. 2 successfully completed. Returning funds (1000)...
+Client no. 2 funds returned.
 Available Funds in Bank: 1000
 
 Simulation Complete.
