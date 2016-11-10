@@ -42,6 +42,7 @@ public class PagingSimulator {
 		String sourcename = new String("input.txt");
 		System.out.println("Source file name = " + sourcename);
 		
+		//note that source file must include integer page numbers greater than 0
 		try{ 
 			sourcefile = new File(sourcename);
 			input = new Scanner(new File(sourcename)).useDelimiter("[\\n\\r\\f\\t\\v\\s,.:;()-+*$?!/\"]+");
@@ -64,11 +65,6 @@ public class PagingSimulator {
 
 	    String[] sequencest = holder.toArray(new String[holder.size()]);
 	    int[] sequence = new int[sequencest.length];
-	    
-	    //check if worked?
-	  /*  for (String mystrings : sequencest) {
-	        System.out.println(mystrings);
-	    }*/
 	    
 	    for(int i=0; i<sequencest.length;i++){
 	    	sequence[i] = Integer.parseInt(sequencest[i]);
