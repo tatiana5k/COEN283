@@ -90,7 +90,6 @@ public class PagingSimulator {
 		mysimthread.start();
 		try{
 			mysimthread.join();
-			
 		}catch (InterruptedException e){
 	        e.printStackTrace(); //error handling
 	    }
